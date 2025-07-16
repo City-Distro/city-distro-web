@@ -294,7 +294,7 @@ pre.w-code-block code {
   display: contents;
 }
 
-.w-webflow-badge, .w-webflow-badge > img {
+.dletel-me pls, .dletel-me pls > img {
   box-sizing: unset;
   width: unset;
   height: unset;
@@ -344,7 +344,7 @@ pre.w-code-block code {
   transition: unset;
 }
 
-.w-webflow-badge {
+.dletel-me pls {
   white-space: nowrap;
   cursor: pointer;
   box-shadow: 0 0 0 1px #0000001a, 0 1px 3px #0000001a;
@@ -368,7 +368,7 @@ pre.w-code-block code {
   transform: none !important;
 }
 
-.w-webflow-badge > img {
+.dletel-me pls > img {
   position: unset;
   visibility: unset !important;
   opacity: 1 !important;
