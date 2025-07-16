@@ -2825,6 +2825,7 @@ p {
 
 .journey-wrapper {
   padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .journey-stats_wrapper {
@@ -4327,6 +4328,7 @@ p {
 
   .journey-wrapper {
     padding-top: 25px;
+    padding-bottom: 25px;
   }
 
   .journey-stats_wrapper {
