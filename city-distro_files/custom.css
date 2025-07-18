@@ -23,3 +23,20 @@
 .w-webflow-badge {
   display: none !important;
 }
+
+/* FORM CSS  */
+.custom-toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  transform: translateX(-10px);
+  background-color: #4caf50;
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 100px;
+  font-size: 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 9999;
+}
