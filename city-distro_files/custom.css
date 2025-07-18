@@ -40,3 +40,14 @@
   transition: opacity 0.3s ease, transform 0.3s ease;
   z-index: 9999;
 }
+
+/* WAITLIST FORM WRAPPER */
+.waitlist-hero-block {
+  padding-top: 15vw;
+}
+
+@media screen and (max-width: 991px) {
+  .waitlist-wrapper {
+    padding-top: 90px;
+  }
+}
