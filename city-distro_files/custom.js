@@ -1,21 +1,16 @@
-// Function to create and show toast
 function showToast(message) {
-  // If a toast already exists, remove it
   const existingToast = document.querySelector(".custom-toast");
   if (existingToast) existingToast.remove();
 
-  // Create new toast
   const toast = document.createElement("div");
   toast.className = "custom-toast";
   toast.textContent = message;
   document.body.appendChild(toast);
 
-  // Trigger animation (optional fade in/out)
   setTimeout(() => {
     toast.classList.add("visible");
   }, 10);
 
-  // Remove after 3 seconds
   setTimeout(() => {
     toast.classList.remove("visible");
     toast.addEventListener("transitionend", () => toast.remove());
@@ -39,7 +34,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const form = document.querySelector("form");
   const toast = document.createElement("div");
 
-  // Basic toast styling and class
   toast.className = "custom-toast";
   document.body.appendChild(toast);
 
@@ -79,7 +73,6 @@ const solutions = document.querySelectorAll(".solution");
 let currentIndex = 0;
 let timer;
 
-// 🔁 Function to show a specific index
 function showSolution(index) {
   solutions.forEach((solution, sIndex) => {
     solution.classList.toggle("cc-show", sIndex === index);
@@ -87,9 +80,8 @@ function showSolution(index) {
   currentIndex = index;
 }
 
-// ⏱ Function to start the auto-rotation timer
 function startAutoRotation() {
-  clearInterval(timer); // stop any previous timer
+  clearInterval(timer); r
 
   timer = setInterval(() => {
     let nextIndex = (currentIndex + 1) % solutions.length;
@@ -97,23 +89,19 @@ function startAutoRotation() {
   }, 2000);
 }
 
-// 👆 Hover + Tap support for each number block
 numberBlocks.forEach((block, index) => {
   block.setAttribute("data-challenge", index + 1);
 
-  // Hover for desktop
   block.addEventListener("mouseenter", () => {
     showSolution(index);
   });
 
-  // Tap/Click for mobile
   block.addEventListener("click", () => {
     showSolution(index);
   });
 });
 
-// ✅ Initialize
-showSolution(0); // Show the first solution by default
+showSolution(0); 
 
 
 // LOAD MORE FUNCTION
@@ -165,4 +153,27 @@ showSolution(0); // Show the first solution by default
       currentIndex = (currentIndex + 1) % totalTabs;
       switchToTab(currentIndex);
     }, delay);
+  });
+
+  //ECO CARDS SCROLLING ANIMATION
+  document.addEventListener("DOMContentLoaded", function () {
+    const scrollContainer = document.querySelector('.eco-card_block');
+    let scrollStep = 1;
+    let scrollDelay = 5; 
+    let pauseBetweenScrolls = 1000; 
+
+    function autoScroll() {
+      let scrollInterval = setInterval(() => {
+        if (scrollContainer.scrollTop + scrollContainer.clientHeight >= scrollContainer.scrollHeight) {
+
+          scrollContainer.scrollTop = 0;
+          clearInterval(scrollInterval);
+          setTimeout(autoScroll, pauseBetweenScrolls);
+        } else {
+          scrollContainer.scrollTop += scrollStep;
+        }
+      }, scrollDelay);
+    }
+
+    setTimeout(autoScroll, pauseBetweenScrolls); 
   });
