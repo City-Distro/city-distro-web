@@ -94,7 +94,7 @@ function startAutoRotation() {
   timer = setInterval(() => {
     let nextIndex = (currentIndex + 1) % solutions.length;
     showSolution(nextIndex);
-  }, 5000);
+  }, 2000);
 }
 
 // 👆 Hover + Tap support for each number block
@@ -104,19 +104,16 @@ numberBlocks.forEach((block, index) => {
   // Hover for desktop
   block.addEventListener("mouseenter", () => {
     showSolution(index);
-    startAutoRotation();
   });
 
   // Tap/Click for mobile
   block.addEventListener("click", () => {
     showSolution(index);
-    startAutoRotation();
   });
 });
 
 // ✅ Initialize
 showSolution(0); // Show the first solution by default
-startAutoRotation(); // Start the timer
 
 
 // LOAD MORE FUNCTION
