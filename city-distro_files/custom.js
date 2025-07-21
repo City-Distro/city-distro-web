@@ -117,3 +117,29 @@ numberBlocks.forEach((block, index) => {
 // ✅ Initialize
 showSolution(0); // Show the first solution by default
 startAutoRotation(); // Start the timer
+
+
+// LOAD MORE FUNCTION
+  document.addEventListener("DOMContentLoaded", function () {
+    const faqItems = document.querySelectorAll(".w-dyn-item");
+    const loadMoreBtn = document.querySelector(".faq-pagination_block");
+
+    // Show only first 2 items initially
+    faqItems.forEach((item, index) => {
+      if (index >= 4) {
+        item.style.display = "none";
+      }
+    });
+
+    // Add click event to load more button
+    loadMoreBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      faqItems.forEach((item) => {
+        item.style.display = "block";
+      });
+
+      // Hide the load more button
+      loadMoreBtn.style.display = "none";
+    });
+  });
