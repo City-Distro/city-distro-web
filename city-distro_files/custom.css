@@ -70,6 +70,23 @@
   transform: translateY(0);
 }
 
-.wait-form_button  {
+.wait-form_button {
   text-align: center;
+}
+
+/* HIDING VERTICAL SCROLLBARS */
+.cat-list_block,
+.testimonial-slide {
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE 10+ */
+  overflow-y: scroll;
+  /* Or auto, depending on your needs */
+}
+
+.cat-list_block::-webkit-scrollbar,
+.testimonial-slide::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari */
 }
