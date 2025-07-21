@@ -143,3 +143,29 @@ startAutoRotation(); // Start the timer
       loadMoreBtn.style.display = "none";
     });
   });
+
+
+  // ANIMATION FOR THE FEATURES TABS
+  document.addEventListener("DOMContentLoaded", function () {
+    const tabSection = document.querySelector("#auto-tab-section"); 
+    if (!tabSection) return;
+
+    const tabLinks = tabSection.querySelectorAll(".w-tab-menu [data-w-tab]");
+    const tabPanes = tabSection.querySelectorAll(".w-tab-content [data-w-tab]");
+    let currentIndex = 0;
+    const totalTabs = tabLinks.length;
+    const delay = 2000; 
+
+    function switchToTab(index) {
+      tabLinks.forEach((link) => link.classList.remove("w--current"));
+      tabPanes.forEach((pane) => pane.classList.remove("w--tab-active"));
+
+      tabLinks[index].classList.add("w--current");
+      tabPanes[index].classList.add("w--tab-active");
+    }
+
+    setInterval(() => {
+      currentIndex = (currentIndex + 1) % totalTabs;
+      switchToTab(currentIndex);
+    }, delay);
+  });

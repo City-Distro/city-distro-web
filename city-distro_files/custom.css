@@ -91,3 +91,8 @@
   display: none;
   /* Chrome, Safari */
 }
+
+
+#auto-tab-section .w-tab-link {
+  transition: all 0.3s ease;
+}
