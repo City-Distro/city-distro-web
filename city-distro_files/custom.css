@@ -24,6 +24,11 @@
   display: none !important;
 }
 
+.app-button_block,
+.features-cta {
+  cursor: pointer;
+}
+
 /* FORM CSS  */
 .custom-toast {
   position: fixed;
@@ -64,4 +69,30 @@
   opacity: 1;
   pointer-events: auto;
   transform: translateY(0);
+}
+
+.wait-form_button {
+  text-align: center;
+}
+
+/* HIDING VERTICAL SCROLLBARS */
+.cat-list_block,
+.testimonial-slide {
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE 10+ */
+  overflow-y: scroll;
+  /* Or auto, depending on your needs */
+}
+
+.cat-list_block::-webkit-scrollbar,
+.testimonial-slide::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari */
+}
+
+
+#auto-tab-section .w-tab-link {
+  transition: all 0.3s ease;
 }
