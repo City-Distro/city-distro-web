@@ -24,6 +24,10 @@
   display: none !important;
 }
 
+.app-button_block {
+  cursor: pointer;
+}
+
 /* FORM CSS  */
 .custom-toast {
   position: fixed;
