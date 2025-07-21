@@ -69,3 +69,7 @@
   pointer-events: auto;
   transform: translateY(0);
 }
+
+.wait-form_button  {
+  text-align: center;
+}
