@@ -24,7 +24,8 @@
   display: none !important;
 }
 
-.app-button_block {
+.app-button_block,
+.features-cta {
   cursor: pointer;
 }
 
