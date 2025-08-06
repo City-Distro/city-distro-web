@@ -293,77 +293,64 @@
                           </div>
                           <div class="waitlist-form-section">
                             <div class="wait-form_block w-form">
-                              <form
-                                id="email-form"
-                                name="email-form"
-                                method="POST"
-                                action="https://docs.google.com/forms/d/e/1FAIpQLSchra2owc6FsCTLt9YGgKrupbE9jE48zi576mquathUeszXrw/formResponse"
-                                class="wait-form"
-                                aria-label="Email Form"
-                              >
-                                <div class="form-input_block">
-                                  <label for="name">Name</label>
+                              <div class="wait-form_block w-form">
+                                <form
+                                  name="waitlist"
+                                  method="POST"
+                                  netlify
+                                  class="wait-form"
+                                  aria-label="Email Form"
+                                >
                                   <input
-                                    class="form-text-field w-input"
-                                    maxlength="256"
-                                    name="entry.1262397298"
-                                    placeholder="full name"
-                                    type="text"
-                                    id="name"
-                                    required
+                                    type="hidden"
+                                    name="form-name"
+                                    value="waitlist"
                                   />
-                                </div>
-                                <div class="form-input_block">
-                                  <label for="Email">Email</label>
+                                  <div class="form-input_block">
+                                    <label for="name">Name</label>
+                                    <input
+                                      class="form-text-field w-input"
+                                      maxlength="256"
+                                      name="name"
+                                      placeholder="full name"
+                                      type="text"
+                                      id="name"
+                                      required
+                                    />
+                                  </div>
+                                  <div class="form-input_block">
+                                    <label for="Email">Email</label>
+                                    <input
+                                      class="form-text-field w-input"
+                                      maxlength="256"
+                                      name="email"
+                                      placeholder="email"
+                                      type="email"
+                                      id="Email"
+                                      required
+                                    />
+                                  </div>
+                                  <div class="form-input_block">
+                                    <label for="Phone-number"
+                                      >Phone number</label
+                                    >
+                                    <input
+                                      class="form-text-field w-input"
+                                      maxlength="256"
+                                      name="phone"
+                                      placeholder="Phone number"
+                                      type="tel"
+                                      id="Phone-number"
+                                      required
+                                    />
+                                  </div>
                                   <input
-                                    class="form-text-field w-input"
-                                    maxlength="256"
-                                    name="entry.561106593"
-                                    placeholder="email"
-                                    type="email"
-                                    id="Email"
-                                    required
+                                    type="submit"
+                                    data-wait="Please wait..."
+                                    class="wait-form_button w-button"
+                                    value="Join waitlist"
                                   />
-                                </div>
-                                <div class="form-input_block">
-                                  <label for="Phone-number">Phone number</label>
-                                  <input
-                                    class="form-text-field w-input"
-                                    maxlength="256"
-                                    name="entry.1451035153"
-                                    placeholder="Phone number"
-                                    type="tel"
-                                    id="Phone-number"
-                                    required
-                                  />
-                                </div>
-                                <input
-                                  type="submit"
-                                  data-wait="Please wait..."
-                                  class="wait-form_button w-button"
-                                  value="Join waitlist"
-                                />
-                              </form>
-                              <div
-                                class="w-form-done"
-                                tabindex="-1"
-                                role="region"
-                                aria-label="Email Form success"
-                              >
-                                <div>
-                                  Thank you! Your submission has been received!
-                                </div>
-                              </div>
-                              <div
-                                class="w-form-fail"
-                                tabindex="-1"
-                                role="region"
-                                aria-label="Email Form failure"
-                              >
-                                <div>
-                                  Oops! Something went wrong while submitting
-                                  the form.
-                                </div>
+                                </form>
                               </div>
                             </div>
                           </div>
@@ -422,10 +409,10 @@
                   <div class="footer-logo">
                     <a href="/">
                       <img
-                      src="./city-distro_files/686f4affecf51144e82b1095_footer-logo.svg"
-                      loading="lazy"
-                      alt=""
-                      class="cc-image"
+                        src="./city-distro_files/686f4affecf51144e82b1095_footer-logo.svg"
+                        loading="lazy"
+                        alt=""
+                        class="cc-image"
                       />
                     </a>
                   </div>
@@ -447,8 +434,8 @@
                         src="./city-distro_files/686f4b551b2104b55e15047b_Vector.png"
                         loading="lazy"
                         alt=""
-                        class="cc-image" /></a
-                    >
+                        class="cc-image"
+                    /></a>
                   </div>
                   <div class="footer-nav">
                     <div class="footer-nav_block">
