@@ -2419,7 +2419,7 @@ p {
 
 .user-card {
   justify-content: space-between;
-  min-height: 450px;
+  height: 450px;
   display: flex;
 }
 
@@ -2550,6 +2550,9 @@ p {
 
 .product-item {
   border-radius: 20px;
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
 }
 
 .fade-block {
@@ -4398,6 +4401,12 @@ p {
     padding-right: 25px;
   }
 
+  .product-item {
+    border-radius: 15px;
+    width: 150px;
+    height: 150px;
+  }
+
   .fade-block {
     width: 150px;
   }
@@ -4874,8 +4883,8 @@ p {
   }
 
   .logos-wrapper {
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
   }
 
   .challenge-card-options_block {
@@ -5016,6 +5025,7 @@ p {
   .user-card {
     flex-flow: column;
     justify-content: flex-end;
+    height: auto;
   }
 
   .user-card-title {
@@ -5644,10 +5654,6 @@ p {
     grid-row-gap: 5px;
   }
 
-  .user-card {
-    min-height: 500px;
-  }
-
   .user-card-title {
     margin-bottom: 10px;
     font-size: 28px;
@@ -5716,6 +5722,7 @@ p {
   .product-item {
     flex: none;
     width: 100px;
+    height: 100px;
   }
 
   .fade-block {

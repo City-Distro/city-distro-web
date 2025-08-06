@@ -1,8 +1,8 @@
 const products = [
   {
-    name: "Belani yoghurt strawberry",
-    price: 3500,
-    img: "./city-distro_files/product-images/belani yoghurt strawberry.png",
+    name: "Belani yoghurt fewfewfwefwefwefwefew",
+    price: 18500,
+    img: "./city-distro_files/product-images/Belani Fresh Orange Juice 12 x 50cl (NGN 18,500).png",
     colorClass: "turq",
   },
   {
@@ -71,7 +71,7 @@ const products = [
     img: "./city-distro_files/product-images/ginger pack up.png",
     colorClass: "orange",
   },
-  
+
   // INITIAL  PRODUCTS
 ];
 
