@@ -30,42 +30,42 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // WAITLIST FORM SUBMISSION
-document.addEventListener("DOMContentLoaded", function () {
-  const form = document.querySelector("form");
-  const toast = document.createElement("div");
+// document.addEventListener("DOMContentLoaded", function () {
+//   const form = document.querySelector("form");
+//   const toast = document.createElement("div");
 
-  toast.className = "custom-toast";
-  document.body.appendChild(toast);
+//   toast.className = "custom-toast";
+//   document.body.appendChild(toast);
 
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
+//   form.addEventListener("submit", function (e) {
+//     e.preventDefault();
 
-    const formData = new FormData(form);
+//     const formData = new FormData(form);
 
-    fetch(form.action, {
-      method: "POST",
-      mode: "no-cors",
-      body: formData,
-    })
-      .then(() => {
-        showToast("✅ You're on the waitlist!");
-        form.reset();
-      })
-      .catch(() => {
-        showToast("❌ Something went wrong. Try again.", true);
-      });
-  });
+//     fetch(form.action, {
+//       method: "POST",
+//       mode: "no-cors",
+//       body: formData,
+//     })
+//       .then(() => {
+//         showToast("✅ You're on the waitlist!");
+//         form.reset();
+//       })
+//       .catch(() => {
+//         showToast("❌ Something went wrong. Try again.", true);
+//       });
+//   });
 
-  function showToast(message, isError = false) {
-    toast.textContent = message;
-    toast.style.backgroundColor = isError ? "#ff4d4f" : "#4caf50";
-    toast.style.opacity = "1";
+//   function showToast(message, isError = false) {
+//     toast.textContent = message;
+//     toast.style.backgroundColor = isError ? "#ff4d4f" : "#4caf50";
+//     toast.style.opacity = "1";
 
-    setTimeout(() => {
-      toast.style.opacity = "0";
-    }, 4000);
-  }
-});
+//     setTimeout(() => {
+//       toast.style.opacity = "0";
+//     }, 4000);
+//   }
+// });
 
 const numberBlocks = document.querySelectorAll(".challenge-card-list_block1");
 const solutions = document.querySelectorAll(".solution");
