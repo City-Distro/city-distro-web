@@ -31,6 +31,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // WAITLIST FORM SUBMISSION
 // WAITLIST FORM SUBMISSION
+const form = document.getElementById("waitlist-form");
+
 form.addEventListener("submit", async function (e) {
   e.preventDefault();
 
@@ -44,12 +46,11 @@ form.addEventListener("submit", async function (e) {
     });
 
     showToast("✅ You’ve been added to the waitlist!");
-    form.reset(); 
+    form.reset();
   } catch (error) {
     showToast("⚠️ Something went wrong. Please try again.");
   }
 });
-
 
 
 
