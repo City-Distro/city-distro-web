@@ -149,3 +149,14 @@
   background: #ff4d4f; /* Hover red */
   color: white;
 }
+
+.product-cat-list_item {
+  cursor: pointer;
+}
+
+.text-grey {
+  color: #000 !important ;
+}
+.text-grey:hover {
+  color: #555555;
+}
