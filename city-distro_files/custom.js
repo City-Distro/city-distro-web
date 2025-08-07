@@ -30,42 +30,30 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // WAITLIST FORM SUBMISSION
-// document.addEventListener("DOMContentLoaded", function () {
-//   const form = document.querySelector("form");
-//   const toast = document.createElement("div");
+// WAITLIST FORM SUBMISSION
+const form = document.getElementById("waitlist-form");
 
-//   toast.className = "custom-toast";
-//   document.body.appendChild(toast);
+form.addEventListener("submit", async function (e) {
+  e.preventDefault();
 
-//   form.addEventListener("submit", function (e) {
-//     e.preventDefault();
+  const formData = new FormData(form);
 
-//     const formData = new FormData(form);
+  try {
+    await fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString(),
+    });
 
-//     fetch(form.action, {
-//       method: "POST",
-//       mode: "no-cors",
-//       body: formData,
-//     })
-//       .then(() => {
-//         showToast("✅ You're on the waitlist!");
-//         form.reset();
-//       })
-//       .catch(() => {
-//         showToast("❌ Something went wrong. Try again.", true);
-//       });
-//   });
+    showToast("✅ You’ve been added to the waitlist!");
+    form.reset();
+  } catch (error) {
+    showToast("⚠️ Something went wrong. Please try again.");
+  }
+});
 
-//   function showToast(message, isError = false) {
-//     toast.textContent = message;
-//     toast.style.backgroundColor = isError ? "#ff4d4f" : "#4caf50";
-//     toast.style.opacity = "1";
 
-//     setTimeout(() => {
-//       toast.style.opacity = "0";
-//     }, 4000);
-//   }
-// });
+
 
 const numberBlocks = document.querySelectorAll(".challenge-card-list_block1");
 const solutions = document.querySelectorAll(".solution");
