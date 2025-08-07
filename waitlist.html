@@ -292,65 +292,65 @@
                             </div>
                           </div>
                           <div class="waitlist-form-section">
-                              <div class="wait-form_block">
-                                <form
-                                  name="waitlist"
-                                  method="POST"
-                                  netlify
-                                  class="wait-form"
-                                  aria-label="Email Form"
-                                >
+                            <div class="wait-form_block">
+                              <form
+                                name="waitlist"
+                                method="POST"
+                                netlify
+                                data-netlify="true"
+                                action=""
+                                class="wait-form"
+                                aria-label="Email Form"
+                              >
+                                <input
+                                  type="hidden"
+                                  name="form-name"
+                                  value="waitlist"
+                                />
+                                <div class="form-input_block">
+                                  <label for="name">Name</label>
                                   <input
-                                    type="hidden"
-                                    name="form-name"
-                                    value="waitlist"
+                                    class="form-text-field w-input"
+                                    maxlength="256"
+                                    name="name"
+                                    placeholder="full name"
+                                    type="text"
+                                    id="name"
+                                    required
                                   />
-                                  <div class="form-input_block">
-                                    <label for="name">Name</label>
-                                    <input
-                                      class="form-text-field w-input"
-                                      maxlength="256"
-                                      name="name"
-                                      placeholder="full name"
-                                      type="text"
-                                      id="name"
-                                      required
-                                    />
-                                  </div>
-                                  <div class="form-input_block">
-                                    <label for="Email">Email</label>
-                                    <input
-                                      class="form-text-field w-input"
-                                      maxlength="256"
-                                      name="email"
-                                      placeholder="email"
-                                      type="email"
-                                      id="Email"
-                                      required
-                                    />
-                                  </div>
-                                  <div class="form-input_block">
-                                    <label for="Phone-number"
-                                      >Phone number</label
-                                    >
-                                    <input
-                                      class="form-text-field w-input"
-                                      maxlength="256"
-                                      name="phone"
-                                      placeholder="Phone number"
-                                      type="tel"
-                                      id="Phone-number"
-                                      required
-                                    />
-                                  </div>
+                                </div>
+                                <div class="form-input_block">
+                                  <label for="Email">Email</label>
                                   <input
-                                    type="submit"
-                                    data-wait="Please wait..."
-                                    class="wait-form_button w-button"
-                                    value="Join waitlist"
+                                    class="form-text-field w-input"
+                                    maxlength="256"
+                                    name="email"
+                                    placeholder="email"
+                                    type="email"
+                                    id="Email"
+                                    required
                                   />
-                                </form>
-                              </div>
+                                </div>
+                                <div class="form-input_block">
+                                  <label for="Phone-number">Phone number</label>
+                                  <input
+                                    class="form-text-field w-input"
+                                    maxlength="256"
+                                    name="phone"
+                                    placeholder="Phone number"
+                                    type="tel"
+                                    id="Phone-number"
+                                    required
+                                  />
+                                </div>
+                                <input
+                                  type="submit"
+                                  data-wait="Please wait..."
+                                  class="wait-form_button w-button"
+                                  value="Join waitlist"
+                                />
+                              </form>
+                            </div>
                           </div>
                         </div>
                       </div>
