@@ -161,37 +161,38 @@
 
   <body class="body">
     <div class="page-wrapper">
-      <div class="fixed">
-        <div class="info-bar">
-          <div class="info-email_block">
-            <div class="email-icon">
-              <img
-                src="./city-distro_files/686e739eed395e8f2995a861_mail-icon.svg"
-                loading="lazy"
-                alt=""
-              />
+     <div class="fixed">
+        <div class="nav-width">
+          <div class="max-width">
+            <div class="info-bar">
+              <div class="info-email_block">
+                <div class="email-icon">
+                  <img
+                    src="./city-distro_files/686e739eed395e8f2995a861_mail-icon.svg"
+                    loading="lazy"
+                    alt=""
+                  />
+                </div>
+                <a href="mailto:sales@citydistro.africa" class="email-link"
+                  >sales@citydistro.africa</a
+                >
+              </div>
+              <div class="info-email_block">
+                <div class="email-icon">
+                  <img
+                    src="./city-distro_files/686e739e667ee7481890254b_WhatsApp-icon.svg"
+                    loading="lazy"
+                    alt=""
+                  />
+                </div>
+                <a
+                  href="http://wa.me/2347075579824"
+                  target="_blank"
+                  class="email-link"
+                  >+2347075579824</a
+                >
+              </div>
             </div>
-            <a
-              href="http://wa.me/2347075579824"
-              target="_blank"
-              class="email-link"
-              >info@citydistro.com</a
-            >
-          </div>
-          <div class="info-email_block">
-            <div class="email-icon">
-              <img
-                src="./city-distro_files/686e739e667ee7481890254b_WhatsApp-icon.svg"
-                loading="lazy"
-                alt=""
-              />
-            </div>
-            <a
-              href="http://wa.me/2347075579824"
-              target="_blank"
-              class="email-link"
-              >+2347075579824</a
-            >
           </div>
         </div>
         <div class="navbar">
@@ -224,7 +225,7 @@
                       <a href="our-story.html" class="navink">⁠⁠Our story</a>
                     </li>
                     <li class="nav-link_block">
-                      <a href="product.html" class="navink">Our product</a>
+                      <a href="our-products.html" class="navink">Our products</a>
                     </li>
                     <li class="nav-link_block">
                       <a href="sell.html" class="navink">Sell with us</a>
@@ -261,7 +262,6 @@
           </div>
         </div>
       </div>
-
       <section class="section">
         <div class="waitlist-wrapper">
           <div class="relative-block">
@@ -301,23 +301,23 @@
                           </div>
                           <div class="waitlist-form-section">
                             <div class="wait-form_block w-form">
+                              <iframe name="gf-target" style="display:none;"></iframe>
                               <form
-                                id="email-form"
-                                name="email-form"
-                                data-name="Email Form"
-                                method="get"
+                                id="manufacturers-form"
+                                name="manufacturers-form"
+                                data-name="manufacturers Form"
+                                method="POST"
+                                action="https://docs.google.com/forms/d/e/1FAIpQLSe7Gmr2DuMAqQmcUiy7vNegl-SjTG7YU8CJw1vxGM2Nj-tR9w/formResponse"
                                 class="wait-form"
-                                data-wf-page-id="686e6e48a29fa36a381c7210"
-                                data-wf-element-id="0492e39d-47bb-f4e6-cd00-0c9b33495f3d"
-                                data-turnstile-sitekey="0x4AAAAAAAQTptj2So4dx43e"
-                                aria-label="Email Form"
-                              >
+                                aria-label="manufacturers Form"
+                                target="gf-target"
+                                >
                                 <div class="form-input_block">
                                   <label for="name">Product name</label
                                   ><input
                                     class="form-text-field w-input"
                                     maxlength="256"
-                                    name="name"
+                                    name="entry.1299242719"
                                     data-name="Name"
                                     placeholder="full name"
                                     type="text"
@@ -331,7 +331,7 @@
                                   ><input
                                     class="form-text-field w-input"
                                     maxlength="256"
-                                    name="Quantity"
+                                    name="entry.1537369659"
                                     data-name="Quantity"
                                     placeholder="e.g 100"
                                     type="number"
@@ -345,7 +345,7 @@
                                   ><input
                                     class="form-text-field w-input"
                                     maxlength="256"
-                                    name="Cost-Price-NGN"
+                                    name="entry.39067540"
                                     data-name="Cost Price (NGN)"
                                     placeholder="Price sold per Carton"
                                     type="number"
@@ -359,7 +359,7 @@
                                   ><input
                                     class="form-text-field w-input"
                                     maxlength="256"
-                                    name="Recommended-Retail-Price-NGN"
+                                    name="entry.1239437119"
                                     data-name="Recommended Retail Price(NGN)"
                                     placeholder="Price sold per item"
                                     type="number"
@@ -373,7 +373,7 @@
                                   ><input
                                     class="form-text-field w-input"
                                     maxlength="256"
-                                    name="City-of-Address"
+                                    name="entry.182096283"
                                     data-name="City of Address"
                                     placeholder="Select City"
                                     type="text"
@@ -387,45 +387,31 @@
                                   ><input
                                     class="form-text-field w-input"
                                     maxlength="256"
-                                    name="Item-Pickup-Location"
+                                    name="entry.1212946266"
                                     data-name="Item Pickup Location"
                                     placeholder="Enter distribution address"
-                                    type="number"
+                                    type="text"
                                     id="Item-Pickup-Location"
                                     required=""
                                   />
                                 </div>
                                 <div class="form-input_block">
-                                  <label for="Item-Pickup-Location"
-                                    >Item Pickup Location</label
+                                  <label for="nafdac-registration-number"
+                                    >Item NAFDAC registration number</label
                                   ><input
                                     class="form-text-field w-input"
                                     maxlength="256"
-                                    name="Item-Pickup-Location"
+                                    name="entry.758958278"
                                     data-name="Item Pickup Location"
                                     placeholder="Enter distribution address"
-                                    type="number"
-                                    id="Item-Pickup-Location"
-                                    required=""
-                                  />
-                                </div>
-                                <div class="form-input_block">
-                                  <label for="Cost-Price-NGN"
-                                    >Item NAFDAC Reg Number</label
-                                  ><input
-                                    class="form-text-field w-input"
-                                    maxlength="256"
-                                    name="Item-NAFDAC-Reg-Number"
-                                    data-name="Item NAFDAC Reg Number"
-                                    placeholder="Enter NAFDAC Reg Number"
-                                    type="number"
-                                    id="Item-NAFDAC-Reg-Number"
+                                    type="text"
+                                    id="nafdac-registration-number"
                                     required=""
                                   />
                                 </div>
                                 <div class="form-input_block">
                                   <label for="Item-NAFDAC-Reg-Number"
-                                    >Item NAFDAC Reg Number</label
+                                    >Upload product image(s)</label
                                   >
                                   <div class="upload-file_container">
                                     <div class="upload-file-block">
@@ -440,8 +426,21 @@
                                         </div>
                                         <div>Upload Image</div>
                                       </div>
-                                      <div class="browse-btn">
-                                        <div>browse here</div>
+                                      <div>
+                                        <label
+                                          class="browse-btn"
+                                          for="product-images"
+                                          >browse here</label
+                                        >
+                                        <input
+                                          type="file"
+                                          name="product-images"
+                                          id="product-images"
+                                          accept="image/*"
+                                          multiple
+                                          style="display: none"
+                                        />
+                                        
                                       </div>
                                     </div>
                                   </div>
@@ -456,63 +455,22 @@
                                       Multiple upload at once is supported
                                     </div>
                                   </div>
+                                  <div
+                                    id="preview-container"
+                                    class="image-preview-grid"
+                                  ></div>
+                                  
                                 </div>
-                                <a
-                                  href="waitlist.html"
+                                <button
+                                  type="submit"
+                                  id="submit-form"
                                   class="wait-form_button w-button"
                                 >
-                                  Join waitlist
-                                </a>
+                                  Submit
+                                </button>
                                 <div>
-                                  <div>
-                                    <template shadowrootmode="closed"
-                                      ><iframe
-                                        src="https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/if/ov2/av0/rcvFeVBnzvrojC7jCi7I9Ry5o5n9TqVg6_jKuZKzOJ9Khw-1752693687-1.3.1.1-fuLis00Bv0suuIngMK0LVKoJ8C3istKju0bepM0RZRc/hqbfk/0x4AAAAAAAQTptj2So4dx43e/auto/fbE/failure_retry/normal/auto/"
-                                        allow="cross-origin-isolated; fullscreen; autoplay"
-                                        sandbox="allow-same-origin allow-scripts allow-popups"
-                                        id="cf-chl-widget-hqbfk"
-                                        tabindex="-1"
-                                        title="Widget containing a Cloudflare security challenge"
-                                        aria-hidden="true"
-                                        style="
-                                          border: none;
-                                          overflow: hidden;
-                                          width: 0px;
-                                          height: 0px;
-                                          position: absolute;
-                                          visibility: hidden;
-                                        "
-                                      ></iframe></template
-                                    ><input
-                                      type="hidden"
-                                      name="cf-turnstile-response"
-                                      id="cf-chl-widget-hqbfk_response"
-                                      value="0.sYNSGguMCK0kkbALPw9QFlglj3v17NVSRChxlBevDR-YUt00lqeXy4Ffwtiusfi9g1qyMy9kYTasPTSixCF8XbGvXZOWl2LXa45PmRjHg7PQA6F5RtJ-3FqJvqN4vArkipuEQSJh8JjFaus4DXqUDfACJmDhoJK8gnn_Ul6tIPmt21DPdbi91YKkdH9Wr1EAhNesNKj16-YJjLv0_Vvi4wV4PjLJEi5HpwP_s6i9UWQ9AFlCMm0nbmaSChEB8F-3nj76iUkZkTG7qX4d3VDcNrSz4b0PG0oi4c9VXngRqat5S5hmhg48c0kHfUSflQvKBMcVaIC_Oh-ZA5N3BW0s3M_2oDWQl1GS6Bn6gT0jxmHAWVPyYQO_zMaYBQuxyT-XzVppK0Nz1_lBYkvr-cpvVSSNP5DAQYKHvvc7fOVzPrVJhrsobGBXVlp1A_cCdSClKwQAz9NAjMR2cvGqcfTgMHlTfexiFEyBQDMps8Mp7DF1BAPjZr6favkC4k-eeuArdzpvh58qbbr_DNPKM1ays2oTdyo4fhP3eb4tLmz-i-OzZREEl4pyGqkbGasRvwzwIPBZPwh38jV3WPF33fissAcHZ_Xj34QUyFMHVxBLpns8YYTQc_Ess0Wnn9rew_-Ot_CGw9QnOtN2qH-xqCdTB-pPS9Cn8SevKVjhPFiFrEMfnB3xuBu0Rg_Lg2HUPYvdj0JUImy33uCdn77jSdMFTBeCtiGYMGDw3XBKmSBKKX3j2KY-xZ6CEJNVW0jP3_lpag_tqXAQj0GV9Et7OrG0UgxBsqpakCY09jQmgiHGOvNwaOYPONcHiZ2m60U5yNUKWeWt8mxFNiZW1Paou_p0L0sJ04OzCqQxBAW7kdlOo_2dlSHo1MqFzBjaXerJuUwGQfrACE0MirBbPsKzYe4c_scouczVgOb5srjgOid7dssBJEeyh6zgEc0nQ5icmmKi.PQRh_yf2VyoRqtndPwMSIQ.22490f77975d0d4bb779f35530e6daf3c279b619cf3f281b10f6ed9fd64108ff"
-                                    />
-                                  </div>
                                 </div>
                               </form>
-                              <div
-                                class="w-form-done"
-                                tabindex="-1"
-                                role="region"
-                                aria-label="Email Form success"
-                              >
-                                <div>
-                                  Thank you! Your submission has been received!
-                                </div>
-                              </div>
-                              <div
-                                class="w-form-fail"
-                                tabindex="-1"
-                                role="region"
-                                aria-label="Email Form failure"
-                              >
-                                <div>
-                                  Oops! Something went wrong while submitting
-                                  the form.
-                                </div>
-                              </div>
                             </div>
                           </div>
                         </div>
@@ -545,18 +503,21 @@
                     </div>
                     <div class="footer-subheading">
                       <div>
-                        CityDistro is your trusted partner for growth,
+                        City Distro is your trusted partner for growth,
                         efficiency, and success.
                       </div>
                     </div>
                     <div class="app-buttons_block">
-                      <a class="app-button_block footer w-inline-block"
+                      <a
+                        target="_blank"
+                        class="app-button_block footer w-inline-block"
                         ><img
                           src="./city-distro_files/686e855112e3169d77f3bbb5_google-play_button.svg"
                           loading="lazy"
                           alt=""
                           class="cc-image" /></a
-                      ><a class="app-button_block footer w-inline-block"
+                      ><a
+                        class="app-button_block footer w-inline-block"
                         ><img
                           src="./city-distro_files/686e855157bf13bb92062aa8_apple-play_button.svg"
                           loading="lazy"
@@ -567,15 +528,16 @@
                   </div>
                 </div>
                 <div class="footer-center">
-                  <div class="footer-logo">
-                    <a href="/">
-                      <img
+                  <div class="footer-logo_block">
+                    <a
+                      href="/"
+                      class="footer-logo w-inline-block"
+                      ><img
                         src="./city-distro_files/686f4affecf51144e82b1095_footer-logo.svg"
                         loading="lazy"
                         alt=""
-                        class="cc-image"
-                      />
-                    </a>
+                        class="cc-image" /></a
+                    >
                   </div>
                   <div class="footer-social_blocks">
                     <a
@@ -583,24 +545,45 @@
                       target="_blank"
                       class="footer-social_link w-inline-block"
                       ><img
-                        src="./city-distro_files/686f4b55fdfd14b7d4d0a26f_mingcute_phone-fill.png"
+                        src="./city-distro_files/686e739e667ee7481890254b_WhatsApp-icon.svg"
                         loading="lazy"
                         alt=""
-                        class="cc-image" /></a
+                        class="cc-image cc-contain" /></a
                     ><a
-                      href="https://www.instagram.com/citydistro_africa/"
+                    href="https://www.instagram.com/citydistro_africa/"
                       target="_blank"
                       class="footer-social_link w-inline-block"
                       ><img
                         src="./city-distro_files/686f4b551b2104b55e15047b_Vector.png"
                         loading="lazy"
                         alt=""
-                        class="cc-image"
+                        class="cc-image cc-contain" /></a
+                    ><a
+                      href="https://www.linkedin.com/company/city-distro/"
+                      target="_blank"
+                      class="footer-social_link w-inline-block"
+                      ><img
+                        src="./city-distro_files/686f4b54a297b0be7054b748_evaLinkedinFill0.png"
+                        loading="lazy"
+                        alt=""
+                        class="cc-image cc-contain" /></a
+                    ><a
+                      href="/"
+                      target="_blank"
+                      class="footer-social_link w-inline-block"
+                      ><img
+                        src="./city-distro_files/686f4b54b07c02d13751e527_icon].png"
+                        loading="lazy"
+                        alt=""
+                        class="cc-image cc-contain"
                     /></a>
                   </div>
-                  <div class="footer-nav">
+                  <div class="footer-nav hide">
                     <div class="footer-nav_block">
-                      <a href="/" class="footer-navlink w-inline-block">
+                      <a
+                        href="/"
+                        class="footer-navlink w-inline-block"
+                      >
                         <div>Home</div> </a
                       ><a
                         href="waitlist.html"
@@ -613,7 +596,7 @@
                       >
                         <div>Our story</div> </a
                       ><a
-                        href="product.html"
+                        href="our-products.html"
                         class="footer-navlink w-inline-block"
                       >
                         <div>Our product</div> </a
@@ -638,12 +621,23 @@
                       />
                     </div>
                     <div class="copyright-text_block">
-                      <div>2024 city distro. All rights reserved</div>
+                      <div>2024 City Distro. All rights reserved</div>
                     </div>
                   </div>
                   <div class="terms-block">
-                    <a href="/" class="terms-link">Privacy policy</a
-                    ><a href="/" class="terms-link">Terms of service</a>
+                    <a href="/city-distro_files/Onboarding Proposal Fresh June.pdf"  target="_blank"
+                    class="terms-link" >
+                    Download company brochure
+                  </a>
+                  <a
+                      href="/"
+                      class="terms-link"
+                      >Privacy policy</a
+                    ><a
+                      href="/"
+                      class="terms-link"
+                      >Terms of service</a
+                    >
                   </div>
                 </div>
               </div>
@@ -673,5 +667,6 @@
     <script src="./city-distro_files/custom.js"></script>
     <script src="./city-distro_files/preload-img.js"></script>
     <script src="./city-distro_files/product.js"></script>
+    <script src="./city-distro_files/sell-form.js"></script>
   </body>
 </html>
