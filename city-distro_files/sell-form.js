@@ -36,7 +36,7 @@ fileInput.addEventListener("change", function () {
       continue;
     }
 
-    selectedFiles.push(file); 
+    selectedFiles.push(file);
 
     const reader = new FileReader();
     reader.onload = function (e) {
@@ -49,7 +49,7 @@ fileInput.addEventListener("change", function () {
       img.className = "preview-thumb";
 
       const removeBtn = document.createElement("button");
-      removeBtn.type = "button"; 
+      removeBtn.type = "button";
       removeBtn.textContent = "✖";
       removeBtn.className = "remove-image-btn";
       removeBtn.addEventListener("click", () => {
@@ -92,21 +92,21 @@ fileInput.addEventListener("change", function () {
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("manufacturers-form");
   const submitBtn = form.querySelector('[type="submit"]');
-
+  
+  
+  function handleError(message) {
+    showToast("❌ " + message, true);
+  }
+  
   function clearForm() {
     form.reset();
-    const previewContainer = document.getElementById("image-preview");
-    if (previewContainer) {
-      previewContainer.innerHTML = "";
-    }
+    previewContainer.innerHTML = "";
     uploadedImageURLs.length = 0;
+    selectedFiles.length = 0;
   }
-
+  
   submitBtn.addEventListener("click", function (e) {
     e.preventDefault();
-
-    submitBtn.disabled = true;
-    submitBtn.textContent = "Submitting...";
 
     const name = form["name"].value.trim();
     const quantity = parseInt(form["Quantity"].value.trim(), 10);
@@ -151,46 +151,36 @@ document.addEventListener("DOMContentLoaded", function () {
       return handleError("Please upload product image(s).");
     }
 
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Submitting...";
+
     // === FORM DATA ===
     const formData = new FormData();
-    formData.append("entry.538142032", name);
-    formData.append("entry.1178974517", quantity);
-    formData.append("entry.282774336", costPrice);
-    formData.append("entry.1087422371", retailPrice);
-    formData.append("entry.1705929895", city);
-    formData.append("entry.1372608661", pickupLocation);
-    formData.append("entry.1158530200", nafdac);
-    formData.append("entry.1331712883", uploadedImageURLs.join(", "));
-
-    // === DEBUG: Console log all form data ===
-    // console.group("🚀 Form Submission Data");
-    // for (const [key, value] of formData.entries()) {
-    //   console.log(`${key}:`, value);
-    // }
-    // console.groupEnd();
+    formData.append("entry.1299242719", name);
+    formData.append("entry.1537369659", quantity);
+    formData.append("entry.39067540", costPrice);
+    formData.append("entry.1239437119", retailPrice);
+    formData.append("entry.182096283", city);
+    formData.append("entry.1212946266", pickupLocation);
+    formData.append("entry.758958278", nafdac);
+    formData.append("entry.560447867", uploadedImageURLs.join(", "));
 
     // === SEND TO GOOGLE FORM ===
-     fetch(form.action, {
-       method: "POST",
-       mode: "no-cors", 
-       body: formData,
-     })
-       .then(() => {
-         showToast("✅ Submitted successfully!");
-         clearForm();
-       })
-       .catch(() => {
-         showToast("❌ Failed to submit form.", true);
-       })
-       .finally(() => {
-         submitBtn.disabled = false;
-         submitBtn.textContent = "Submit";
-       });
-
-    function handleError(message) {
-      showToast(message, true);
-      submitBtn.disabled = false;
-      submitBtn.textContent = "Submit";
-    }
+    fetch(form.action, {
+      method: "POST",
+      mode: "no-cors",
+      body: formData,
+    })
+      .then(() => {
+        showToast("✅ Submitted successfully!");
+        clearForm();
+      })
+      .catch(() => {
+        showToast("❌ Failed to submit form.", true);
+      })
+      .finally(() => {
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Submit";
+      });
   });
 });
