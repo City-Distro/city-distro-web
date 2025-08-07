@@ -67,8 +67,8 @@ fileInput.addEventListener("change", function () {
     reader.readAsDataURL(file);
 
     // Upload immediately
-    const cloudName = "dco8lmxfy";
-    const uploadPreset = "city_distro_test";
+    const cloudName = "dhtv0wl1g"
+    const uploadPreset = "city_distro";
     const url = `https://api.cloudinary.com/v1_1/${cloudName}/upload`;
 
     const formData = new FormData();
