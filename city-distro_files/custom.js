@@ -130,6 +130,33 @@ showSolution(0);
   });
 
 
+  document.addEventListener("DOMContentLoaded", function () {
+    const tabLinks = document.querySelectorAll(".w-tab-link");
+    const tabPanes = document.querySelectorAll(".w-tab-pane");
+
+    tabLinks.forEach((link) => {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        const target = this.getAttribute("data-w-tab");
+
+        // Remove active states from all tabs
+        tabLinks.forEach((l) => l.classList.remove("w--current"));
+        tabPanes.forEach((pane) => pane.classList.remove("w--tab-active"));
+
+        // Add active state to clicked tab
+        this.classList.add("w--current");
+        const activePane = document.querySelector(
+          `.w-tab-pane[data-w-tab="${target}"]`
+        );
+        if (activePane) {
+          activePane.classList.add("w--tab-active");
+        }
+      });
+    });
+  });
+
+
   // ANIMATION FOR THE FEATURES TABS
   document.addEventListener("DOMContentLoaded", function () {
     const tabSection = document.querySelector("#auto-tab-section"); 
