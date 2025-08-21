@@ -1,3 +1,4 @@
+/* Default toast */
 .custom-toast {
   position: fixed;
   bottom: 20px;
@@ -13,6 +14,11 @@
   transform: translateY(-10px);
   transition: opacity 0.3s ease, transform 0.3s ease;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Custom adjustment just for app store clicks */
+.custom-toast.app-toast {
+  right: 60px; /* 👈 adjust this freely */
 }
 
 .custom-toast.visible {
