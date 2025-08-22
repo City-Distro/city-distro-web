@@ -1,20 +1,22 @@
-function showToast(message) {
+function showToast(message, extraClass = "") {
   const existingToast = document.querySelector(".custom-toast");
   if (existingToast) existingToast.remove();
 
   const toast = document.createElement("div");
-  toast.className = "custom-toast";
+  toast.className = `custom-toast ${extraClass}`;
   toast.textContent = message;
   document.body.appendChild(toast);
 
   setTimeout(() => {
-    toast.classList.add("visible");
+    toast.style.opacity = "1";
+    toast.style.transform = "translateY(0)";
   }, 10);
 
   setTimeout(() => {
-    toast.classList.remove("visible");
-    toast.addEventListener("transitionend", () => toast.remove());
-  }, 3000);
+    toast.style.opacity = "0";
+    toast.style.transform = "translateY(-10px)";
+    setTimeout(() => toast.remove(), 300);
+  }, 2000);
 }
 
 // Intercept clicks on the app store buttons
@@ -24,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
   appButtons.forEach((btn) => {
     btn.addEventListener("click", (e) => {
       e.preventDefault();
-      showToast("Coming soon");
+      showToast("Coming soon","app-toast");
     });
   });
 });
@@ -126,6 +128,33 @@ showSolution(0);
 
       // Hide the load more button
       loadMoreBtn.style.display = "none";
+    });
+  });
+
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const tabLinks = document.querySelectorAll(".w-tab-link");
+    const tabPanes = document.querySelectorAll(".w-tab-pane");
+
+    tabLinks.forEach((link) => {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        const target = this.getAttribute("data-w-tab");
+
+        // Remove active states from all tabs
+        tabLinks.forEach((l) => l.classList.remove("w--current"));
+        tabPanes.forEach((pane) => pane.classList.remove("w--tab-active"));
+
+        // Add active state to clicked tab
+        this.classList.add("w--current");
+        const activePane = document.querySelector(
+          `.w-tab-pane[data-w-tab="${target}"]`
+        );
+        if (activePane) {
+          activePane.classList.add("w--tab-active");
+        }
+      });
     });
   });
 
