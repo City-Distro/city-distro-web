@@ -4972,11 +4972,6 @@ p {
     padding-left: 0;
   }
 
-  .navbar-menu_wrapper {
-    z-index: -1;
-    top: 100px;
-  }
-
   .navbar-menu_block {
     border-radius: 20px;
     flex-direction: column;
