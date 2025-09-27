@@ -39,11 +39,62 @@ document.addEventListener("DOMContentLoaded", function () {
   toast.className = "custom-toast";
   document.body.appendChild(toast);
 
+  function showToast(message, isError = false) {
+    toast.textContent = message;
+    toast.style.backgroundColor = isError ? "#ff4d4f" : "#4caf50";
+    toast.style.opacity = "1";
+    setTimeout(() => (toast.style.opacity = "0"), 4000);
+  }
+
+  function handleError(message) {
+    showToast(message, true);
+  }
+
+  function isValidNigerianNumber(phone) {
+    const tel = phone.trim();
+
+    if (tel.startsWith("0")) return /^0\d{10}$/.test(tel);
+    if (tel.startsWith("+234")) return /^\+234\d{10}$/.test(tel);
+    if (tel.startsWith("234")) return /^234\d{10}$/.test(tel);
+
+    return false;
+  }
+
   form.addEventListener("submit", function (e) {
     e.preventDefault();
-
     const formData = new FormData(form);
 
+    // 🕵️ Honeypot check
+    if (form["website"].value) {
+      return handleError("Spam detected. Submission blocked.");
+    }
+
+    // ✅ Get values from Google Form field names
+    const name = formData.get("entry.1262397298")?.trim(); // Name
+    const email = formData.get("entry.561106593")?.trim(); // Email
+    const phone = formData.get("entry.1451035153")?.trim(); // Phone
+
+    // === VALIDATIONS ===
+    if (!name || !phone || !email) {
+      return handleError("Please fill all required fields correctly.");
+    }
+
+    if (name.length < 3 || name.length > 50) {
+      return handleError("Name must be 3–50 characters.");
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      return handleError("Enter a valid email address.");
+    }
+
+    if (!isValidNigerianNumber(phone)) {
+      return handleError(
+        "Enter a valid Nigerian telephone number (e.g. 08012345678 or +2348012345678)."
+      );
+    }
+
+    // 🚀 Submit
     fetch(form.action, {
       method: "POST",
       mode: "no-cors",
@@ -57,16 +108,6 @@ document.addEventListener("DOMContentLoaded", function () {
         showToast("❌ Something went wrong. Try again.", true);
       });
   });
-
-  function showToast(message, isError = false) {
-    toast.textContent = message;
-    toast.style.backgroundColor = isError ? "#ff4d4f" : "#4caf50";
-    toast.style.opacity = "1";
-
-    setTimeout(() => {
-      toast.style.opacity = "0";
-    }, 4000);
-  }
 });
 
 const numberBlocks = document.querySelectorAll(".challenge-card-list_block1");

@@ -130,6 +130,12 @@ document.addEventListener("DOMContentLoaded", function () {
   submitBtn.addEventListener("click", function (e) {
     e.preventDefault();
 
+    // honeypot check to block bots
+    const honeypot = form["website"].value;
+    if (honeypot) {
+      return handleError("Spam detected. Submission blocked.");
+    }
+
     const name = form["name"].value.trim();
     const quantity = parseInt(form["Quantity"].value.trim(), 10);
     const costPrice = parseFloat(form["Cost-Price-NGN"].value.trim());
@@ -142,6 +148,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const nafdac = form["nafdac-registration-number"]?.value.trim() || "";
     const telephone = form["telephone-number"].value.trim();
     const email = form["email-address"].value.trim();
+
+    // validation to block links and crypto spam
+    const forbiddenPattern = /(https?:\/\/|www\.|btc|bitcoin)/i;
+    if (forbiddenPattern.test(name) || forbiddenPattern.test(companyName)) {
+      return handleError("Invalid characters detected in text fields.");
+    }
 
     // === VALIDATIONS ===
     if (name.length < 3 || name.length > 50) {
@@ -167,7 +179,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (city.length < 2 || pickupLocation.length < 2) {
       return handleError("City and pickup location are too short.");
     }
-    
+
     // ✅ Company Name
     if (companyName.length < 3 || companyName.length > 25) {
       return handleError("Company name must be 3–25 characters.");
